@@ -1,0 +1,163 @@
+.footer {
+	background-color: $gray-700;
+	color: $gray-100;
+	padding: 66px 0 100px;
+
+	.col {
+		margin-bottom: 30px;
+
+		@include media(">=tablet") {
+			padding: 0 25px;
+			margin-bottom: 0;
+		}
+	}
+
+	.row {
+		@include media(">=tablet") {
+			margin: 0 -25px;
+		}
+	}
+
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+	}
+
+	h6 {
+		margin-bottom: 26px;
+		color: $white;
+		font-family: $sub-title-font;
+		font-weight: 500;
+	}
+
+	p {
+		line-height: 1.71;
+	}
+}
+
+.social {
+	@extend %listreset;
+	display: flex;
+	margin: 0 -6px;
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 15px;
+		margin: 0 6px;
+		color: $white;
+		border-radius: 50%;
+		font-size: 19px;
+		text-decoration: none;
+		transition: transform .3s;
+	}
+
+	.facebook {
+		background-color: #2e3192;
+
+		&:hover {
+			transform: scale(1.1);
+			
+		}
+	}
+
+	.twitter {
+		background-color: #00aeef;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	.youtube {
+		background-color: #ed3123;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	.linkdin {
+		background-color: #171a8f;
+		
+		i {
+			padding-bottom: 2px;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.form-group {
+	margin: 34px 0 20px 0;
+	font-family: $font-proxima;
+	padding: 0 20px;
+	width: 100%;
+	font-family: $font-proxima;
+
+	@include media(">=tablet") {
+		display: flex;
+	}
+
+	@include media(">=desktop") {
+		padding: 0 0 0 20px;
+	}
+
+	.width-25 {
+		width: 100%;
+
+		@include media(">=tablet") {
+			width: 25%;
+		}
+	}
+
+	.width-50 {
+		width: 100%;
+
+		@include media(">=tablet") {
+			width: 50%;
+		}
+	}
+
+	.form-control,
+	.btn {
+		margin: 3px;
+		padding: 14px 20px;
+		border-color: transparent;
+		border-radius: 2px;
+		transition: border-color .4s ease-in-out,  background-color 0.4s ease-in-out;
+
+		@include placeholder {
+			color: #83969f;
+		}
+
+		&:focus {
+			border-color: $coral-200;
+		}
+
+		
+	}
+}
+
+.btn {
+	background-color: #a2ca28;
+	color: $white;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+
+	.icon-chevron-circle-right {
+		padding-left: 6px;
+		font-size: 11px;
+	}
+
+	&:hover {
+		background-color: lighten($color: #a2ca28, $amount: 10%);
+	}
+}
